@@ -62,7 +62,7 @@ export default function Main({ match }) {
     setDevs(devs.filter(dev => dev._id !== targetId));
   }
 
-  function closeSocket() {
+  function handleLogout() {
     if (socket) {
       socket.disconnect();
 
@@ -72,7 +72,10 @@ export default function Main({ match }) {
 
   return (
     <div className="main-container">
-      <Link to="/" onClick={closeSocket}>
+      <Link
+        to="/"
+        onClick={handleLogout}
+      >
         <img src={logo} alt="Tindev" />
       </Link>
 

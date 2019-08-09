@@ -9,7 +9,7 @@ import './Login.css';
 export default function Login({ history }) {
   const [username, setUsername] = useState('');
 
-  async function handleSubmit(event) {
+  async function handleLogin(event) {
     event.preventDefault();
 
     const response = await api.post('/devs', { username });
@@ -23,7 +23,7 @@ export default function Login({ history }) {
     <div className="login-container">
       <img src={logo} alt="Tindev" />
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleLogin}>
         <input
           placeholder="Digite seu usuário no GitHub"
           value={username}
