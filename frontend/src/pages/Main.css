@@ -1,0 +1,118 @@
+.main-container {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.main-container ul {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin-top: 50px;
+}
+
+.main-container ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container ul li img {
+  border-radius: 5px 5px 0 0;
+  max-width: 100%;
+}
+
+.main-container ul li footer {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 0 0 5px 5px;
+  flex: 1;
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.main-container ul li footer strong {
+  color: #333;
+  font-size: 16px;
+}
+
+.main-container ul li footer p {
+  color: #999;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 5px;
+}
+
+.main-container ul li .buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10px;
+}
+
+.main-container ul li .buttons button {
+  background: #fff;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  height: 50px;
+  padding: 0;
+}
+
+.main-container ul li .buttons button:hover img {
+  transform: translateY(-5px);
+  transition: all 0.2s;
+}
+
+.main-container .empty {
+  color: #999;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 300px;
+}
+
+.match-container {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.match-container .avatar {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  height: 200px;
+  margin: 30px 0;
+  width: 200px;
+}
+
+.match-container strong {
+  color: #fff;
+  font-size: 32px;
+}
+
+.match-container p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 10px;
+  max-height: 400px;
+}
+
+.match-container button {
+  background: none;
+  border: 0;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+}

@@ -7,13 +7,13 @@ const MatchController = require('./controllers/MatchController');
 
 const routes = express.Router();
 
-routes.get(`/devs`, DevController.index);
-routes.get(`/devs/:devId`, DevController.show);
-routes.post(`/devs`, DevController.store);
+routes.get('/devs', DevController.index);
+routes.get('/devs/:devId', DevController.show);
+routes.post('/devs', DevController.store);
 
-routes.post(`/devs/:targetId/likes`, LikeController.store);
-routes.post(`/devs/:targetId/dislikes`, DislikeControlller.store);
+routes.post('/devs/:targetId/likes', LikeController.store);
+routes.post('/devs/:targetId/dislikes', DislikeControlller.store);
 
-routes.delete(`/devs/matches`, MatchController.delete);
+routes.delete('/devs/matches', MatchController.delete);
 
 module.exports = routes;

@@ -30,14 +30,14 @@ module.exports = {
         const targetSocket = req.connectedUsers[targetId];
 
         if (loggedSocket) {
-          req.io.to(loggedSocket).emit('match', targetDev);
+          req.io.to(loggedSocket).emit('matches', [targetDev]);
         } else if (!loggedDev.matches.includes(targetId)) {
           loggedDev.matches.push(targetId);
         }
 
         if (targetSocket) {
-          req.io.to(targetSocket).emit('match', loggedDev);
-        } else if (!targetDev.matches.includes(targetId)) {
+          req.io.to(targetSocket).emit('matches', [loggedDev]);
+        } else if (!targetDev.matches.includes(loggedId)) {
           targetDev.matches.push(loggedId);
         }
       }

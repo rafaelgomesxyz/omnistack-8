@@ -14,6 +14,8 @@ io.on('connection', socket => {
   const { loggedId } = socket.handshake.query;
 
   connectedUsers[loggedId] = socket.id;
+
+  socket.on('disconnect', () => delete connectedUsers[loggedId]);
 });
 
 mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-xbtdb.mongodb.net/omnistack8?retryWrites=true&w=majority', {
